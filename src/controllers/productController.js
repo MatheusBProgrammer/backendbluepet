@@ -1,7 +1,7 @@
 // controllers/productController.js
 
 const Product = require("../models/productModel");
-const uploadImageToImgbb = require("../utils/uploadImageToImagebb");
+const uploadImageToImgbb = require("../utils/uploadImageToImageBb");
 
 // Registrar produto
 const registerProduct = async (req, res) => {
