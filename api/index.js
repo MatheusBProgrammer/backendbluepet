@@ -1,7 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
-const connectDB = require("./config/db");
+const connectDB = require("../src/config/db");
 
 // Carregar variáveis de ambiente
 dotenv.config();
@@ -18,8 +18,8 @@ app.use(cors());
 app.use(express.json());
 
 // Importar rotas
-const adminRoutes = require("./routes/adminRoutes"); // Verifique se isso está correto
-const productRoutes = require("./routes/productRoutes"); // Verifique se isso está correto
+const adminRoutes = require("../src/routes/adminRoutes"); // Verifique se isso está correto
+const productRoutes = require("../src/routes/productRoutes"); // Verifique se isso está correto
 
 // Usar as rotas
 app.use("/api/admin", adminRoutes);
