@@ -24,7 +24,10 @@ const productRoutes = require("./routes/productRoutes"); // Verifique se isso es
 // Usar as rotas
 app.use("/api/admin", adminRoutes);
 app.use("/api/products", productRoutes);
-
+// Rota para a raiz que retorna { ok: true }
+app.get("/", (req, res) => {
+  res.json({ ok: true });
+});
 // Iniciar o servidor
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
